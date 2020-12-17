@@ -54,3 +54,8 @@ jobs:
       codeCoverageTool: Cobertura
       summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/coverage.xml'
       reportDirectory: '$(System.DefaultWorkingDirectory)/**/htmlcov'
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: '/home/vsts/.electrumsv-sdk/logs/'
+      artifactName: 'logs'
+    displayName: 'Publish logs'
